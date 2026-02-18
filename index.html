@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agifules Farmer Producer Pvt Ltd</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Header -->
+  <header class="top-header">
+    Agifules Farmer Producer Private Limited
+  </header>
+
+  <div class="container">
+
+    <!-- Vertical Sidebar -->
+    <nav class="sidebar">
+
+  <a href="index.html">🏠 Home</a>
+
+  <!-- Dropdown Button -->
+  <button class="dropdown-btn">
+    🍨 Flavors ▼
+  </button>
+
+  <!-- Dropdown Menu -->
+  <div class="dropdown-container">
+    <a href="mango.html">🥭 Mango</a>
+    <a href="pista.html">🌰 Pista</a>
+    <a href="gulkand.html">🌹 Gulkand</a>
+    <a href="dryfruits.html">🥜 Dry Fruits</a>
+    <a href="jamun.html">🍇 Jamun</a>
+    <a href="banana.html">🍌 Banana</a>
+    <a href="custardapple.html">🍏 Custard Apple</a>
+  </div>
+
+  <a href="about.html">ℹ️ About Us</a>
+  <a href="contact.html">📩 Contact</a>
+
+</nav>
+
+    <!-- Main Content -->
+    <main class="content">
+
+      <!-- Slider -->
+      <div class="slider">
+        <img id="slideImage" src="images/kulfi1.jpg" alt="Kanha Kulfy">
+      </div>
+
+      <!-- WhatsApp Button -->
+      <a class="whatsapp-btn" 
+         href="order.html" target="_blank">
+        📲 Order on WhatsApp
+      </a>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    Email: info@agifules.com
+  </footer>
+
+  <!-- JavaScript Slider -->
+  <script>
+    let images = [
+      "images/kulfi1.jpg",
+      "images/kulfi2.jpg",
+      "images/kulfi3.jpg",
+      "images/kulfi4.jpg",
+      "images/kulfi5.jpg",
+     // "images/kulfi6.jpg",
+      //"images/kulfi7.jpg",
+      "images/kulfi8.jpg",
+      "images/kulfi9.jpg"
+    ];
+
+    let index = 0;
+    let slide = document.getElementById("slideImage");
+
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      slide.src = images[index];
+    }, 2000);
+  </script>
+  <script>
+  let dropdown = document.querySelector(".dropdown-btn");
+  let container = document.querySelector(".dropdown-container");
+
+  dropdown.addEventListener("click", function () {
+    if (container.style.display === "block") {
+      container.style.display = "none";
+    } else {
+      container.style.display = "block";
+    }
+  });
+</script>
+
+
+</body>
+</html>
