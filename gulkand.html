@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -132,3 +133,139 @@ Mobile: ${mobile}`;
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mango Kulfi - Kanha Kulfy</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      text-align: center;
+      margin: 0;
+    }
+
+    header {
+      background: darkgreen;
+      color: white;
+      padding: 20px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .product-box {
+      background: white;
+      width: 400px;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 10px gray;
+    }
+
+    .product-box img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    .price {
+      font-size: 22px;
+      margin: 15px 0;
+      color: darkred;
+      font-weight: bold;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 95%;
+      padding: 12px;
+      background: green;
+      color: white;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: darkgreen;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>🌹 Gulkand Kulfi - Kanha Kulfy</header>
+
+  <!-- Product Box -->
+  <div class="product-box">
+
+    <!-- Mango Image -->
+    <img src="images/gulkand.jpg" alt="Gulkand Kulfi">
+
+    <!-- Price -->
+    <p class="price">Price: ₹35 / Piece</p>
+
+    <!-- Customer Form -->
+    <h3>Order Details</h3>
+
+    <input type="text" id="name" placeholder="Customer Name">
+    <input type="text" id="address" placeholder="Address">
+    <input type="number" id="qty" placeholder="Quantity">
+    <input type="date" id="date">
+    <input type="text" id="function" placeholder="Function Name">
+    <input type="time" id="time">
+    <input type="text" id="mobile" placeholder="Mobile Number">
+
+    <!-- WhatsApp Button -->
+    <button onclick="sendWhatsApp()">📲 Order on WhatsApp</button>
+
+  </div>
+
+  <!-- WhatsApp Script -->
+  <script>
+    function sendWhatsApp() {
+
+      let name = document.getElementById("name").value;
+      let address = document.getElementById("address").value;
+      let qty = document.getElementById("qty").value;
+      let date = document.getElementById("date").value;
+      let func = document.getElementById("function").value;
+      let time = document.getElementById("time").value;
+      let mobile = document.getElementById("mobile").value;
+
+      let message =
+`🍨 New Kulfi Order
+
+Name: ${name}
+Address: ${address}
+Flavor: Gulkand 🌹
+Quantity: ${qty}
+Date: ${date}
+Function: ${func}
+Time: ${time}
+Mobile: ${mobile}`;
+
+      let phone = "9130584984"; // अपना WhatsApp number डालो
+
+      let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
+>>>>>>> 3a6c460a24ffd789e28fbe9c6691f424ee74a680
